@@ -1,8 +1,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-	<title>连连看</title>
+	<title>连连看-调用js库例子</title>
 	<meta charset="utf-8">
+    <!--<script src="https://rawgit.com/zqfleaf/html5lianlian/master/doudou.js"></script>-->
     <script src="./doudou.js"></script>
     <script>
 
@@ -18,25 +19,22 @@
 	    	//根据屏幕计算最合理的行,列
 	    	var _rows=aa.checkrows;
 	    	var _cols=aa.checkcols;
-				_rows = 8
-				_cols = 5
+				var _rows = 8;
+				var _cols = 5;
 
 	    	//每个图的位置
 	    	aa.img=img;
-				/*
 			aa.imgPosition=[0,
 			1,45,88,132,175,217,261,304,347,390,
 			433,476,519,562,605,648,691,734,777,820,
-			863,907,950,993,1036,1080,1123,1169,1209,1252];*/
-			aa.imgPosition = [0, 42, 83, 126, 168, 211, 254, 297,
-															340, 383, 426, 469, 512, 555]
+			863,907,950,993,1036,1080,1123,1169,1209,1252];
 
 	    	//声音
-			//aa.SoundCG = new Audio('chuangguan.wav');
-			//aa.SoundSelect = new Audio('click.wav');
-			//aa.SoundDisappear = new Audio('dispear.wav');
-			//aa.SoundResort = new Audio('resort.wav');
-			//aa.SoundNoDisappear = new Audio('nodispear.wav');
+			aa.SoundCG = new Audio('chuangguan.wav');
+			aa.SoundSelect = new Audio('click.wav');
+			aa.SoundDisappear = new Audio('dispear.wav');
+			aa.SoundResort = new Audio('resort.wav');
+			aa.SoundNoDisappear = new Audio('nodispear.wav');
 
 			//创建行列数据
 	    	aa.createmap(_rows,_cols);
