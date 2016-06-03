@@ -591,6 +591,11 @@
 			var elem = this.controlCanvas=document.getElementById(this.controlCanvasID);
 			this.controlContext=this.controlCanvas.getContext('2d');
 
+			elem.addEventListener('touchstart',function(evt){
+				var col=parseInt((evt.offsetX-that.leftPadding)/that.picWidth);
+				var row=parseInt((evt.offsetY-that.topPadding)/that.picHeight);
+				that.select(row,col); });
+
 			elem.addEventListener('click',function(evt){
 				var col=parseInt((evt.offsetX-that.leftPadding)/that.picWidth);
 				var row=parseInt((evt.offsetY-that.topPadding)/that.picHeight);
