@@ -135,7 +135,7 @@
 					this.selectedPoint.col=col;
 					this.drawBorder(this.controlContext,row,col,'#00ffaa');
 					//this.SoundSelect.currentTime=0;
-					this.SoundSelect.play();
+					//this.SoundSelect.play();
 				}
 				else{
 					if (this.selectedPoint.row==row && this.selectedPoint.col==col){
@@ -146,7 +146,7 @@
 							this.clearBorder(this.controlContext,this.selectedPoint.row,this.selectedPoint.col);
 							this.fullMap[this.selectedPoint.row][this.selectedPoint.col]=0;
 							this.fullMap[row][col]=0;
-							this.SoundDisappear.play();
+							//this.SoundDisappear.play();
 							this.clearOne();
 							this.moveMap(row,col,this.selectedPoint.row,this.selectedPoint.col);
 							this.drawMap();
@@ -169,7 +169,7 @@
 							else{
 								this.lastSelectPoint.row=row;
 								this.lastSelectPoint.col=col;
-								this.SoundNoDisappear.play();
+								//this.SoundNoDisappear.play();
 							}
 						}
 					}
@@ -178,7 +178,7 @@
 						this.selectedPoint.row=row;
 						this.selectedPoint.col=col;
 						this.drawBorder(this.controlContext,row,col,'#00ffaa');
-						this.SoundSelect.play();
+						//this.SoundSelect.play();
 					}
 				}
 			}
@@ -187,7 +187,7 @@
 			this.totalCount--;
 			this.totalCount--;
 			if (!this.totalCount){
-				this.SoundCG.play();
+				//this.SoundCG.play();
 				if(this.moveType<8){
 					//alert("Congradulations!,Go Next!");
 					this.moveType++;
@@ -204,7 +204,7 @@
 				this.IsNeedDrawLine=false;
 				while(!this.isAlive()){
 				 	this.resort();
-					this.SoundResort.play();
+					//this.SoundResort.play();
 				 	this.icount=this.icount+60;
 				}
 				this.IsNeedDrawLine=true;
@@ -590,7 +590,8 @@
 
 			var elem = this.controlCanvas=document.getElementById(this.controlCanvasID);
 			this.controlContext=this.controlCanvas.getContext('2d');
-			elem.addEventListener('touchstart', function(evt){
+
+			elem.addEventListener('click',function(evt){
 				var col=parseInt((evt.offsetX-that.leftPadding)/that.picWidth);
 				var row=parseInt((evt.offsetY-that.topPadding)/that.picHeight);
 				that.select(row,col);
