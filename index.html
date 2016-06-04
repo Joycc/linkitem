@@ -178,7 +178,8 @@
 		}
 		</style>
 </head>
-<body onmousedown="return false;">
+<body onmousedown="return false;"  ondragstart="window.event.returnValue=false"
+			 onselectstart="event.returnValue=false">
 	  <div id="main">
     <canvas id="myCanvas" width="100%" height="100%">Your browser does not have
     support for Canvas.</canvas>
