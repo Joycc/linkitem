@@ -596,13 +596,11 @@
 				var row=parseInt((evt.offsetY-that.topPadding)/that.picHeight);
 				that.select(row,col); });
 
-			/*
 			elem.addEventListener('click',function(evt){
 				var col=parseInt((evt.offsetX-that.leftPadding)/that.picWidth);
 				var row=parseInt((evt.offsetY-that.topPadding)/that.picHeight);
 				that.select(row,col);
 			},false);
-			*/
 			var pWidth=this.leftPadding + this.picWidth*(this.cols+2);
 			var pHeight=this.topPadding + this.picHeight*(this.rows+2);
 			this.mapCanvas.width=this.controlCanvas.width=this.lineCanvas.width=pWidth;
