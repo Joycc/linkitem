@@ -591,7 +591,7 @@
 			var elem = this.controlCanvas=document.getElementById(this.controlCanvasID);
 			this.controlContext=this.controlCanvas.getContext('2d');
 
-			elem.addEventListener('singletap',function(evt){
+			elem.addEventListener('singleTap',function(evt){
 				var col=parseInt((evt.offsetX-that.leftPadding)/that.picWidth);
 				var row=parseInt((evt.offsetY-that.topPadding)/that.picHeight);
 				that.select(row,col); });
